@@ -1,0 +1,269 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ddd;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* Layout */
+section {
+  padding: 80px 0;
+}
+.max-width {
+  max-width: 1200px;
+  padding: 0 60px;
+  margin: auto;
+}
+
+/* Section Titles */
+section .title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 120px;
+  height: 2px;
+  background: #555;
+  transform: translateX(-50%);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  transition: 0.3s;
+}
+.navbar.sticky {
+  background: #c50000;
+  padding: 10px 0;
+}
+.navbar .max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+}
+.navbar .menu li {
+  display: inline-block;
+}
+.navbar .menu li a {
+  color: #ddd;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.navbar .menu li a:hover {
+  color: #fff;
+}
+
+/* MENU BTN */
+.menu-btn {
+  display: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+/* SCROLL BTN */
+.scroll-up-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+.scroll-up-btn.show {
+  opacity: 1;
+}
+
+/* HOME (BANNER INCLUDED) */
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/banner.jpg") no-repeat center;
+
+  background-size: cover;
+}
+.home .text-2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.home .text-3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+.home .text-3 span {
+  color: crimson;
+}
+.home p {
+  margin-top: 10px;
+  color: #ccc;
+}
+.home a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: crimson;
+  color: #fff;
+  border-radius: 4px;
+}
+.home a:hover {
+  background: #a80000;
+}
+
+/* ABOUT */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.about-content img {
+  width: 300px;
+  border-radius: 6px;
+}
+.about-content .text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* EXPERIENCE */
+.services {
+  background: #111;
+}
+.serv-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 calc(33% - 20px);
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.card:hover {
+  background: #2a2a2a;
+}
+.card .text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skills-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.skills .bars {
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* CONTACT */
+.contact-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+.contact button {
+  padding: 10px;
+  background: crimson;
+  color: #fff;
+  border: none;
+}
+.contact button:hover {
+  background: #a80000;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-content,
+  .skills-content,
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #b30000;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #800000;
+}
