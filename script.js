@@ -37,7 +37,7 @@ $(document).ready(function () {
         "Thermal, Nuclear & Infrastructure Projects",
         "24+ Years Experience"
       ],
-      typeSpeed: 60,
+      typeSpeed: 90,
       backSpeed: 30,
       loop: true
     });
